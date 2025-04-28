@@ -1423,7 +1423,7 @@ preloader
 */
 #preloader {
   overflow: hidden;
-  background-image: linear-gradient(145deg, #5fe75f 0%, #e9fff3 100%);
+  background-image: linear-gradient(145deg, #5fe75f 0%, #5fe75f 30%);
   left: 0;
   right: 0;
   top: 0;
