@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #000000;
+      color: #fff;
+      padding: 15px 20px;
+      position: relative;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .logo img {
+      height: 15vh;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a, .dropdown > button {
+      color: white;
+      background: none;
+      border: none;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      padding: 5px 10px;
+    }
+
+    nav a:hover, .dropdown:hover > button {
+      color: #5fb759;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background-color: #fff0f0;
+      width: 400px;
+      z-index: 1;
+      flex-direction: column;
+    }
+
+    .dropdown-content a {
+      padding: 10px;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      border-bottom: 1px solid #5fb759;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #5fb759;
+      color: #fff;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      padding: 10px 20px;
+    }
+
+    .mobile-menu a, .mobile-menu .mobile-dropdown-btn {
+      padding: 10px 0;
+      border-bottom: 1px solid #444;
+      color: white;
+      text-decoration: none;
+    }
+
+    .mobile-dropdown-content {
+      display: none;
+      flex-direction: column;
+      padding-left: 15px;
+    }
+
+    .mobile-dropdown-content a {
+      border-bottom: none;
+    }
+
+    .hero {
+      background: url('./assets/images/sf2.png') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      font-weight: 700;
+    }
+
+
+    .about-section {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.about-content .left-img{
+
+  height: 50vh;
+  width: 40vh;
+}
+
+
+.about-content .right-img{
+
+height: 50vh;
+width: 40vh;
+}
+
+
+.about-text {
+  max-width: 700px;
+}
+
+.about-text h3 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.about-text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.about-text p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.about-buttons button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #5fb759;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.about-buttons button:hover {
+  background-color: #000000;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-text h3 {
+    font-size: 1rem;
+  }
+
+  .about-buttons {
+    flex-direction: column;
+  }
+
+  .about-buttons button {
+    width: 100%;
+  }
+}
+
+
+ 
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-menu.show {
+        display: flex;
+      }
+
+      .mobile-dropdown-content.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <img src="./assets/images/logo.png" alt="Logo" />
+      </div>
+      <nav class="desktop-menu">
+        <a href="./index.html">HOME</a>
+        <a style="color: #5fb759;" href="#">ABOUT</a>
+        <div class="dropdown">
+          <button>TRAINING</button>
+          <div class="dropdown-content">
+            <a href="#">Corporate Training</a>
+            <a href="#">Workshops</a>
+            <a href="#">Online Courses</a>
+            <a href="#">Corporate Training</a>
+            <a href="#">Workshops</a>
+            <a href="#">Online Courses</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button>SERVICES</button>
+          <div class="dropdown-content">
+            <a href="">PROFESSIONAL LABOUR HIRING</a>
+            <a href="">INSPECTIONS AND PROOF LOADING OF EQUIPMENTS</a>
+            <a href="">SURVEYING SERVICES</a>
+            <a href="">MECHANICAL AND ELECTRICAL MAINTENANCE OF EQUIPMENTS AND MACHINERY</a>
+          </div>
+        </div>
+        <a href="#">CONTACT US</a>
+      </nav>
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <div class="mobile-dropdown">
+        <div class="mobile-dropdown-btn" onclick="toggleDropdown('training')">TRAINING ▼</div>
+        <div class="mobile-dropdown-content" id="training-dropdown">
+          <a href="#">Corporate Training</a>
+          <a href="#">Workshops</a>
+          <a href="#">Online Courses</a>
+        </div>
+      </div>
+      <div class="mobile-dropdown">
+        <div class="mobile-dropdown-btn" onclick="toggleDropdown('services')">SERVICES ▼</div>
+        <div class="mobile-dropdown-content" id="services-dropdown">
+          <a href="">PROFESSIONAL LABOUR HIRING</a>
+          <a href="">INSPECTIONS AND PROOF LOADING OF EQUIPMENTS</a>
+          <a href="">SURVEYING SERVICES</a>
+          <a href="">MECHANICAL AND ELECTRICAL MAINTENANCE OF EQUIPMENTS AND MACHINERY</a>
+        </div>
+      </div>
+      <a href="#">CONTACT US</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>About Us</h1>
+  </section>
+
+
+
+
+<!-- about section -->
+
+
+
+  <section class="about-section">
+    <div class="about-content">
+      <img src="./assets/images/sf4.png" alt="Left Image" class="about-img left-img" />
+  
+      <div class="about-text">
+        <h3>Welcome to Our Story</h3>
+        <h1>Empowering Growth and Innovation</h1>
+        <p>We believe in the power of knowledge and creativity to transform lives and businesses. Our solutionsn the power of knowledge and creativity to transform lives and businesses. Our solutionsn the power of knowledge and creativity to transform lives and businesses. Our solutionsn the power of knowledge and creativity to transform lives and businesses. Our solutions are built around this principle.</p>
+       
+        <div class="about-buttons">
+          <button>Learn More</button>
+          <button>Get Started</button>
+        </div>
+      </div>
+  
+      <img src="./assets/images/sf3.png" alt="Right Image" class="about-img right-img" />
+    </div>
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("show");
+    }
+
+    function toggleDropdown(id) {
+      const dropdown = document.getElementById(`${id}-dropdown`);
+      dropdown.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
