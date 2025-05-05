@@ -42,6 +42,248 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
+/* gifts code */
+
+
+/* Footer Style */
+
+footer {
+	background-color:#5fb759;
+	padding: 80px 0px;
+	color: #fff;
+}
+
+footer h4 {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 0.25px;
+	margin-bottom: 35px;
+}
+footer p {
+	color: #fff;
+}
+
+footer ul.social-icons {
+	margin-top: 25px;
+}
+
+footer ul.social-icons li {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+footer ul.social-icons li:last-child {
+	margin-right: 0px;
+}
+
+footer ul.social-icons li a {
+	width: 34px;
+	height: 34px;
+	display: inline-block;
+	line-height: 34px;
+	text-align: center;
+	background-color: #fff;
+	color: #232323;
+	border-radius: 50%;
+	transition: all 0.3s;
+}
+
+footer ul.social-icons li a:hover {
+	background-color: #5fb759;
+}
+
+footer ul.menu-list li {
+	margin-bottom: 13px;
+}
+
+footer ul.menu-list li:last-child {
+	margin-bottom: 0px;
+}
+
+footer ul.menu-list li a {
+	font-size: 14px;
+	color: #fff;
+	transition: all 0.3s;
+}
+
+footer ul.menu-list li a:hover {
+	color: rgb(0, 0, 0);
+}
+
+footer .contact-form input {
+	border-radius: 20px;
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+	padding: 0px 15px;
+	color: #aaa!important;
+	background-color: #f1ecec;
+	font-size: 13px;
+	text-transform: none;
+	box-shadow: none;
+	border: none;
+	margin-bottom: 15px;
+}
+
+footer .contact-form input:focus {
+	outline: none;
+	box-shadow: none;
+	border: none;
+	background-color: #fbf8f8;
+}
+
+footer .contact-form textarea {
+	border-radius: 20px;
+	height: 120px;
+	max-height: 200px;
+	min-height: 120px;
+	display: inline-block;
+	padding: 15px;
+	color: #aaa!important;
+	background-color: #ffffff;
+	font-size: 13px;
+	text-transform: none;
+	box-shadow: none;
+	border: none;
+	margin-bottom: 15px;
+}
+
+footer .contact-form textarea:focus {
+	outline: none;
+	box-shadow: none;
+	border: none;
+	background-color: #fffdfd;
+}
+
+footer .contact-form ::-webkit-input-placeholder { /* Edge */
+  color: #aaa;
+}
+footer .contact-form :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #aaa;
+}
+footer .contact-form ::placeholder {
+  color: #aaa;
+}
+
+footer .contact-form button.filled-button {
+	background-color: transparent;
+	color: #fff;
+	background-color: rgb(0, 0, 0);
+	border: none;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 12px 30px;
+	border-radius: 30px;
+	display: inline-block;
+	transition: all 0.3s;
+	outline: none;
+	box-shadow: none;
+	text-shadow: none;
+	cursor: pointer;
+}
+
+footer .contact-form button.filled-button:hover {
+	background-color: #fff;
+	color: #5fb759;
+}
+
+
+
+.ad-section {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.ad-section h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.ads-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ad-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.ad-card:hover {
+  transform: translateY(-5px);
+}
+
+.ad-card img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.ad-card-content {
+  padding: 20px;
+}
+
+.ad-card-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.ad-card-content p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.ad-card-content a {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #5fb759;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.ad-card-content a:hover {
+  background-color: #5fb759;
+}
+
+
+
+/* end of gifts code */
+
+
+
+/* Sub-footer Style */
+
+.sub-footer {
+	background-color: #000;
+	text-align: center;
+	padding: 25px 0px;
+}
+
+.sub-footer p {
+	color: #fff;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+}
+
+.sub-footer a {
+	color: #fff;
+}
+
+
 .clearfix:after {
   content: ".";
   display: block;
@@ -414,7 +656,7 @@ header
     float: none;
     text-align: center;
     width: 100%;
-    background-color: #fff;
+    background-color: #000;
     margin-left: 0px;
   }
 }
@@ -501,7 +743,7 @@ header
 .header-area .main-nav .nav li.submenu ul li a {
   opacity: 1;
   display: block;
-  background: #fff;
+  background: #000;
   color: #7a7a7a!important;
   padding-left: 20px;
   height: 40px;
@@ -669,9 +911,26 @@ header
 
 @media (max-width: 767px) {
 
-  .img-fill img {
-    display: none;
+  .main-banner .img-fill img  {
+        display: none;
+        
    }
+
+   .header-text h3{
+
+    
+font-size: 10px;
+   }
+
+   .Modern-Slider {
+
+    background-color: #5fb759;
+   }
+   header{
+    background-color: #000;
+   }
+
+  
    
   .header-area .main-nav .logo {
     color: #1e1e1e;
@@ -1344,75 +1603,6 @@ contact
 
 
 
-
-
-/* 
----------------------------------------------
-footer
---------------------------------------------- 
-*/
-
-footer {
-  padding: 80px 0px;
-  background: rgb(51,155,158);
-  background: linear-gradient(145deg, rgba(51,155,158,1) 0%, rgba(104,204,152,1) 100%);
-}
-
-footer .left-text-content p {
-  color: #fff;
-  font-size: 14px;
-}
-
-footer .left-text-content a {
-  color: #fff;
-}
-
-footer .right-text-content {
-  float: right;
-}
-
-footer .right-text-content p {
-  color: #fff;
-  font-size: 14px;
-  margin-right: 15px;
-  text-transform: uppercase;
-}
-
-footer .right-text-content ul li {
-  display: inline-block;
-}
-
-footer .right-text-content ul li a {
-  width: 32px;
-  height: 32px;
-  display: inline-block;
-  text-align: center;
-  line-height: 32px;
-  font-size: 14px;
-  background-color: #fff;
-  border-radius: 50%;
-  color: #5fb759;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-footer .right-text-content ul li a:hover {
-  background-color: #5fb759;
-  color: #fff;
-}
-
-@media (max-width: 992px) {
-  footer .left-text-content p {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  footer .right-text-content {
-    float: none;
-    text-align: center;
-  }
-}
 
 
 
