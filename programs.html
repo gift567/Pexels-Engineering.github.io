@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Programs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+
+
+
+    /* Hamburger Button Styling */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 20vh;
+  width: auto;
+}
+
+
+.header {
+  background: #222;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+.nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav li {
+  position: relative;
+}
+.nav a {
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+.nav a:hover, .nav a.active {
+  background-color: #5fb759;
+}
+.submenu:hover ul {
+  display: block;
+}
+.submenu ul {
+  display: none;
+  position: absolute;
+  background: #333;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  min-width: 200px;
+}
+.submenu ul li a {
+  padding: 10px;
+  white-space: nowrap;
+}
+.submenu ul li a:hover {
+  background: #444;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: none;
+  transition: opacity 1s ease-in-out;
+}
+.slide.active {
+  display: block;
+}
+.slider-content {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider-content h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.slider-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+.slider-content button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #5fb759;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.slider-content button:hover {
+  background-color: #5fb759;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+ 
+
+
+
+ .nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #222;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav li {
+    text-align: center;
+  }
+
+
+
+
+
+  .submenu ul {
+    position: static;
+  }
+  .slider {
+    height: 300px;
+  }
+  .slider-content h3 {
+    font-size: 1.5rem;
+  }
+  .slider-content p {
+    font-size: 1rem;
+  }
+  .slider-content button {
+    margin: 5px 5px;
+  }
+
+    .hamburger {
+    display: block;
+  }
+  
+}
+
+
+
+
+
+/* end head */
+
+
+    .container-courses {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .course-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .course-card {
+        width: 100%;
+      background-color: white;
+      padding: 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 50vh;
+      display: block;
+    }
+
+    .course-card-content {
+      padding: 20px;
+    }
+
+    .course-card-content h3 {
+      margin-top: 0;
+    }
+
+    .course-card-content p {
+      margin: 8px 0;
+    }
+
+    .course-card-content button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .course-card-content button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Popup Form */
+    .popup-form {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .form-content {
+      background: white;
+      margin: 10% auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .form-content h2 {
+      margin-top: 0;
+    }
+
+    .form-content input,
+    .form-content textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-content input[type="submit"] {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .form-content input[type="submit"]:hover {
+      background-color: #218838;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .form-content {
+        margin-top: 30%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+
+
+<!-- Navbar -->
+  <header class="header">
+    <div class="container">
+      <!-- Logo Image -->
+      <div class="logo">
+        <a href="#top">
+          <img src="./assets/images/logo.png" alt="Company Logo" />
+        </a>
+      </div>
+      
+      <!-- Navigation Menu -->
+      <!-- Hamburger Icon -->
+<button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">☰</button>
+
+      <nav>
+        <ul class="nav" id="nav-menu">
+          <li><a href="#top" class="active">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./training.html">Training</a></li>
+          <li class="submenu">
+            <a href="javascript:;">Programs</a>
+            <ul>
+              <li><a href="#">SCAFFOLDING TRAINING PROGRAMS</a></li>
+              <li><a href="#">(i) Scaffold Refresher</a></li>
+              <li><a href="#">(ii) Basic Scaffolding</a></li>
+              <li><a href="#">(iii) Advanced Scaffolding</a></li>
+              <li><a href="#">(iv) Basic Scaffold Inspection</a></li>
+              <li><a href="#">(v) Scaffold Awareness</a></li>
+            </ul>
+          </li>
+          <li class="submenu">
+            <a href="javascript:;">Services</a>
+            <ul>
+              <li><a href="#">Professional Labour Hiring</a></li>
+              <li><a href="#">Inspections & Proof Loading</a></li>
+              <li><a href="#">Surveying Services</a></li>
+              <li><a href="#">Mechanical & Electrical Maintenance</a></li>
+            </ul>
+          </li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Slider -->
+  <section class="slider">
+    <div class="slide active" style="background-image: url('./assets/images/sf6.png');">
+      <div class="slider-content">
+        <h3>Expert Scaffold Training</h3>
+        <p>Learn from industry professionals and get certified.</p>
+        <button>Explore Courses</button>
+        <button>Enroll Now</button>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('./assets/images/sf5.png');">
+      <div class="slider-content">
+        <h3>Professional Labour Hiring</h3>
+        <p>Hire reliable, skilled personnel for your projects.</p>
+        <button>Our Services</button>
+        <button>Get a Quote</button>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('./assets/images/sf5.png');">
+      <div class="slider-content">
+        <h3>Professional Labour Hiring333</h3>
+        <p>Hire reliable, skilled personnel for your projects.</p>
+        <button>Our Services</button>
+        <button>Get a Quote</button>
+      </div>
+    </div>
+
+  </section>
+
+  <script src="head.js"></script>
+
+
+
+    <div class="scroll-down scroll-to-section"><a href="#about"><i class="fa fa-arrow-down"></i></a></div>
+    <!-- ***** Main Banner Area End ***** -->
+
+
+
+  <div class="container-courses">
+    <h1>Our Programs</h1>
+    <div class="course-list">
+
+      <!-- Course 1 -->
+      <div class="course-card">
+        <img src="./assets/images/slide (7).jpg" alt="Web Development" />
+        <div class="course-card-content">
+          <h3>Web Development</h3>
+          <p><strong>Description:</strong> Learn how to build websites using HTML, CSS, and JavaScript.</p>
+          <p><strong>Duration:</strong> 3 Months</p>
+          <p><strong>Course Outline:</strong> HTML, CSS, JavaScript, Responsive Design</p>
+          <p><strong>Price:</strong> $300</p>
+          <button onclick="openForm('Web Development')">Register</button>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="course-card">
+       <img src="./assets/images/slide (7).jpg" alt="Web Development" />
+        <div class="course-card-content">
+          <h3>Graphic Design</h3>
+          <p><strong>Description:</strong> Master design principles using Canva and Adobe tools.</p>
+          <p><strong>Duration:</strong> 2 Months</p>
+          <p><strong>Course Outline:</strong> Photoshop, Illustrator, Canva</p>
+          <p><strong>Price:</strong> $200</p>
+          <button onclick="openForm('Graphic Design')">Register</button>
+        </div>
+      </div>
+
+
+
+          <!-- Course 2 -->
+      <div class="course-card">
+       <img src="./assets/images/slide (7).jpg" alt="Web Development" />
+        <div class="course-card-content">
+          <h3>Graphic Design</h3>
+          <p><strong>Description:</strong> Master design principles using Canva and Adobe tools.</p>
+          <p><strong>Duration:</strong> 2 Months</p>
+          <p><strong>Course Outline:</strong> Photoshop, Illustrator, Canva</p>
+          <p><strong>Price:</strong> $200</p>
+          <button onclick="openForm('Graphic Design')">Register</button>
+        </div>
+      </div>
+
+
+          <!-- Course 2 -->
+      <div class="course-card">
+       <img src="./assets/images/slide (7).jpg" alt="Web Development" />
+        <div class="course-card-content">
+          <h3>Graphic Design</h3>
+          <p><strong>Description:</strong> Master design principles using Canva and Adobe tools.</p>
+          <p><strong>Duration:</strong> 2 Months</p>
+          <p><strong>Course Outline:</strong> Photoshop, Illustrator, Canva</p>
+          <p><strong>Price:</strong> $200</p>
+          <button onclick="openForm('Graphic Design')">Register</button>
+        </div>
+      </div>
+
+          <!-- Course 2 -->
+      <div class="course-card">
+       <img src="./assets/images/slide (7).jpg" alt="Web Development" />
+        <div class="course-card-content">
+          <h3>Graphic Design</h3>
+          <p><strong>Description:</strong> Master design principles using Canva and Adobe tools.</p>
+          <p><strong>Duration:</strong> 2 Months</p>
+          <p><strong>Course Outline:</strong> Photoshop, Illustrator, Canva</p>
+          <p><strong>Price:</strong> $200</p>
+          <button onclick="openForm('Graphic Design')">Register</button>
+        </div>
+      </div>
+
+          <!-- Course 2 -->
+      <div class="course-card">
+       <img src="./assets/images/slide (7).jpg" alt="Web Development" />
+        <div class="course-card-content">
+          <h3>Graphic Design</h3>
+          <p><strong>Description:</strong> Master design principles using Canva and Adobe tools.</p>
+          <p><strong>Duration:</strong> 2 Months</p>
+          <p><strong>Course Outline:</strong> Photoshop, Illustrator, Canva</p>
+          <p><strong>Price:</strong> $200</p>
+          <button onclick="openForm('Graphic Design')">Register</button>
+        </div>
+      </div>
+
+
+      <!-- Add more course cards here -->
+
+    </div>
+  </div>
+
+  <!-- Registration Popup Form -->
+  <div class="popup-form" id="registerForm">
+    <div class="form-content">
+      <span class="close-btn" onclick="closeForm()">&times;</span>
+      <h2>Register for <span id="courseName"></span></h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Full Name" required />
+        <input type="email" name="email" placeholder="Your Email Address" required />
+        <input type="tel" name="phone" placeholder="Your Phone Number" required />
+        <label>Upload Document (ID, Certificates etc):</label>
+        <input type="file" name="document" required />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openForm(course) {
+      document.getElementById('registerForm').style.display = 'block';
+      document.getElementById('courseName').innerText = course;
+    }
+
+    function closeForm() {
+      document.getElementById('registerForm').style.display = 'none';
+    }
+
+    window.onclick = function (event) {
+      const form = document.getElementById('registerForm');
+      if (event.target === form) {
+        form.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
