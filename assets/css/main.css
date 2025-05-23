@@ -76,7 +76,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 
     .right-side button {
       padding: 12px 24px;
-      font-size: 16px;...
+      font-size: 16px;
       background-color: #5fb759;
       color: white;
       border: none;
@@ -85,7 +85,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
     }
 
     .right-side button:hover {
-      background-color: #5fb759tt..;
+      background-color: #5fb759;
     }
 
     @media (max-width: 768px) {
@@ -246,75 +246,154 @@ footer .contact-form button.filled-button:hover {
 }
 
 
-
-.ad-section {
-  padding: 40px 20px;
-  background-color: #fff;
+/* why chose us on home page */
+.why-choose-us-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
   text-align: center;
 }
 
-.ad-section h2 {
-  font-size: 28px;
+.why-choose-us-title {
+  font-size: 2em;
+  margin-bottom: 40px;
   color: #333;
-  margin-bottom: 30px;
 }
 
-.ads-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+.why-choose-us-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.ad-card {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  overflow: hidden;
+.why-choose-us-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  width: 280px;
   transition: transform 0.3s ease;
 }
 
-.ad-card:hover {
+.why-choose-us-card:hover {
   transform: translateY(-5px);
 }
 
-.ad-card img {
-  width: 100%;
-  height: 50vh;
-  object-fit: cover;
+.why-choose-us-icon {
+  font-size: 40px;
+  color: #4CAF50;
+  margin-bottom: 20px;
 }
 
-.ad-card-content {
-  padding: 20px;
-}
-
-.ad-card-content h3 {
-  font-size: 20px;
+.why-choose-us-heading {
+  font-size: 1.2em;
   margin-bottom: 10px;
   color: #222;
 }
 
-.ad-card-content p {
-  font-size: 14px;
+.why-choose-us-text {
+  font-size: 0.95em;
   color: #666;
-  margin-bottom: 15px;
 }
 
-.ad-card-content a {
-  display: inline-block;
-  padding: 10px 16px;
-  background-color: #5fb759;
-  color: #fff;
+/* sliding training cards */
+.training-slider-section {
+  background-color: #f0f4f8;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.training-slider-title {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.training-slider-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.training-slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+.training-card {
+  flex: 0 0 80%;
+  max-width: 280px;
+  scroll-snap-align: start;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.training-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.training-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.training-card h3 {
+  font-size: 1.1em;
+  margin: 10px 0;
+  color: #2c3e50;
+}
+
+.training-card p {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.training-date {
+  font-size: 0.85em;
+  color: #888;
+}
+
+.view-all-card {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  font-weight: bold;
+  display: flex;
+  padding: 20px;
+  flex: 0 0 80%;
+  max-width: 280px;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  transition: background 0.3s;
 }
 
-.ad-card-content a:hover {
-  background-color: #5fb759;
+.view-all-card:hover {
+  background-color: #43a047;
 }
 
+@media (min-width: 600px) {
+  .training-card,
+  .view-all-card {
+    flex: 0 0 240px;
+  }
+}
 
 
 /* end of gifts code */

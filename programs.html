@@ -14,6 +14,155 @@
 
 
 
+     /* Footer Style */
+
+.footer {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links,
+.footer-social,
+.footer-form {
+  flex: 1 1 300px;
+}
+
+.footer-links h3,
+.footer-social h3,
+.footer-form h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #f4f4f4;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #5fb759;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #5fb759 ;
+}
+
+.footer-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-form input,
+.footer-form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.footer-form button {
+  padding: 10px;
+  background-color: #5fb759;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer-form button:hover {
+  background-color: #5fb759;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+
+   /* banner */
+
+   .banner {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      background: url('./assets/images/slide-ban\ \(4\).jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .banner::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .banner-text {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+    }
+
+    .banner-text h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .banner-text p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        height: 50vh;
+      }
+
+      .banner-text h1 {
+        font-size: 2rem;
+      }
+
+      .banner-text p {
+        font-size: 1rem;
+      }
+    }
+
+    /* end banner */
+
 
     /* Hamburger Button Styling */
 .hamburger {
@@ -234,7 +383,7 @@
     }
 
     .course-card-content button {
-      background-color: #007bff;
+      background-color: #5fb759;
       color: white;
       border: none;
       padding: 10px 15px;
@@ -243,7 +392,7 @@
     }
 
     .course-card-content button:hover {
-      background-color: #0056b3;
+      background-color: #5fb759;
     }
 
     /* Popup Form */
@@ -328,29 +477,12 @@
 
       <nav>
         <ul class="nav" id="nav-menu">
-          <li><a href="#top" class="active">Home</a></li>
+          <li><a href="index.html" >Home</a></li>
           <li><a href="./about.html">About</a></li>
-          <li><a href="./training.html">Training</a></li>
-          <li class="submenu">
-            <a href="javascript:;">Programs</a>
-            <ul>
-              <li><a href="#">SCAFFOLDING TRAINING PROGRAMS</a></li>
-              <li><a href="#">(i) Scaffold Refresher</a></li>
-              <li><a href="#">(ii) Basic Scaffolding</a></li>
-              <li><a href="#">(iii) Advanced Scaffolding</a></li>
-              <li><a href="#">(iv) Basic Scaffold Inspection</a></li>
-              <li><a href="#">(v) Scaffold Awareness</a></li>
-            </ul>
-          </li>
-          <li class="submenu">
-            <a href="javascript:;">Services</a>
-            <ul>
-              <li><a href="#">Professional Labour Hiring</a></li>
-              <li><a href="#">Inspections & Proof Loading</a></li>
-              <li><a href="#">Surveying Services</a></li>
-              <li><a href="#">Mechanical & Electrical Maintenance</a></li>
-            </ul>
-          </li>
+          <li><a href="./programs.html" class="active">Training</a></li>
+          <li><a href="./services.html">Services</a></li>
+       
+       
           <li><a href="./contact.html">Contact Us</a></li>
         </ul>
       </nav>
@@ -361,28 +493,25 @@
   <section class="slider">
     <div class="slide active" style="background-image: url('./assets/images/sf6.png');">
       <div class="slider-content">
-        <h3>Expert Scaffold Training</h3>
-        <p>Learn from industry professionals and get certified.</p>
-        <button>Explore Courses</button>
-        <button>Enroll Now</button>
+        <h3 style="font-size: 6vh;">Welcome To Our Training Programs</h3>
+        <p>Feel free to Call US</p>
+       
       </div>
     </div>
 
     <div class="slide" style="background-image: url('./assets/images/sf5.png');">
       <div class="slider-content">
-        <h3>Professional Labour Hiring</h3>
+        <h3 style="font-size: 6vh;">Programs That Get you Certified</h3>
         <p>Hire reliable, skilled personnel for your projects.</p>
-        <button>Our Services</button>
-        <button>Get a Quote</button>
+        
       </div>
     </div>
 
     <div class="slide" style="background-image: url('./assets/images/sf5.png');">
       <div class="slider-content">
-        <h3>Professional Labour Hiring333</h3>
+        <h3>Programs That Are Up-To-Date</h3>
         <p>Hire reliable, skilled personnel for your projects.</p>
-        <button>Our Services</button>
-        <button>Get a Quote</button>
+        
       </div>
     </div>
 
@@ -399,86 +528,147 @@
 
   <div class="container-courses">
     <h1>Our Programs</h1>
+    <h3 style="text-align: center;">SCAFFOLDING TRAINING PROGRAMS</h3>
+    <br>
     <div class="course-list">
-
+     
       <!-- Course 1 -->
       <div class="course-card">
         <img src="./assets/images/slide (7).jpg" alt="Web Development" />
         <div class="course-card-content">
-          <h3>Web Development</h3>
-          <p><strong>Description:</strong> Learn how to build websites using HTML, CSS, and JavaScript.</p>
-          <p><strong>Duration:</strong> 3 Months</p>
-          <p><strong>Course Outline:</strong> HTML, CSS, JavaScript, Responsive Design</p>
-          <p><strong>Price:</strong> $300</p>
+          <h3>Scaffold Refresher</h3>
+         
+          <P><strong>Course Code:</strong>  SCAFF-001</P>
+          <P><strong>Price:</strong> K1200</P>
+          <P><strong>Duration :</strong>  5 Days</P>
+          <br>
+
+          <p><strong>Course Description:</strong> <br> The Scaffold Refresher Training Course is
+            designed to introduce cerƟfied Scaffolders who have not
+            undertaken any training in the last 2 years to new legislaƟon
+            procedures for erecting and dismantling of Scaffolding which
+            have been implemented. The candidate will be exposed to
+            new procedures of the OSHA 29 CFR 1926.454- PREVENTING
+            FALLS in Scaffolding new legislaƟon. and dismantling of
+            Scaffolding which have been implemented. The candidate will
+            be exposed to standard procedures of erecting and dismantle
+            of scaffolds in line with mining regulaƟon of Zambia.</p>
+            <br>
+           
           <button onclick="openForm('Web Development')">Register</button>
         </div>
       </div>
 
-      <!-- Course 2 -->
-      <div class="course-card">
-       <img src="./assets/images/slide (7).jpg" alt="Web Development" />
+
+       <div class="course-card">
+        <img src="./assets/images/slide (7).jpg" alt="Web Development" />
         <div class="course-card-content">
-          <h3>Graphic Design</h3>
-          <p><strong>Description:</strong> Master design principles using Canva and Adobe tools.</p>
-          <p><strong>Duration:</strong> 2 Months</p>
-          <p><strong>Course Outline:</strong> Photoshop, Illustrator, Canva</p>
-          <p><strong>Price:</strong> $200</p>
-          <button onclick="openForm('Graphic Design')">Register</button>
+          <h3>Basic Scaffoldingr</h3>
+         
+          <P><strong>Course Code:</strong>  SCAFF-002</P>
+          <P><strong>Price:</strong> K1200</P>
+          <P><strong>Duration :</strong>  3 Days</P>
+          <br>
+
+          <p><strong>Course Description:</strong> <br> The courseduration is 3-days. This 
+course is designed to assess the attendees exisƟng skills and
+build on these by the way of training in safe scaffolding
+methods. This course enables Scaffolders to be able
+to demonstrate competence through a mixture of training
+and assessment.</p>
+            <br>
+           
+          <button onclick="openForm('Web Development')">Register</button>
         </div>
       </div>
 
 
 
-          <!-- Course 2 -->
-      <div class="course-card">
-       <img src="./assets/images/slide (7).jpg" alt="Web Development" />
+          <div class="course-card">
+        <img src="./assets/images/slide (7).jpg" alt="Web Development" />
         <div class="course-card-content">
-          <h3>Graphic Design</h3>
-          <p><strong>Description:</strong> Master design principles using Canva and Adobe tools.</p>
-          <p><strong>Duration:</strong> 2 Months</p>
-          <p><strong>Course Outline:</strong> Photoshop, Illustrator, Canva</p>
-          <p><strong>Price:</strong> $200</p>
-          <button onclick="openForm('Graphic Design')">Register</button>
+          <h3>Advanced Scaffolding</h3>
+         
+          <P><strong>Course Code:</strong>  SCAFF-003</P>
+          <P><strong>Price:</strong> K1200</P>
+          <P><strong>Duration :</strong>  3 Days</P>
+          <br>
+
+          <p><strong>Course Description:</strong> <br> The Advanced Scaffolder has been
+            designed to give attendees both theoreƟcal and pracƟcal
+            knowledge to enable them to erect and dismantle advanced
+            scaffolding structures. The course has a duration of 5
+            days.Aten dees must have completed Basic Scaf folding
+            training qualify to do the advanced course.</p>
+            <br>
+           
+          <button onclick="openForm('Web Development')">Register</button>
         </div>
       </div>
 
 
-          <!-- Course 2 -->
       <div class="course-card">
-       <img src="./assets/images/slide (7).jpg" alt="Web Development" />
+        <img src="./assets/images/slide (7).jpg" alt="Web Development" />
         <div class="course-card-content">
-          <h3>Graphic Design</h3>
-          <p><strong>Description:</strong> Master design principles using Canva and Adobe tools.</p>
-          <p><strong>Duration:</strong> 2 Months</p>
-          <p><strong>Course Outline:</strong> Photoshop, Illustrator, Canva</p>
-          <p><strong>Price:</strong> $200</p>
-          <button onclick="openForm('Graphic Design')">Register</button>
+          <h3>Basic Scaffold Inspection</h3>
+         
+          <P><strong>Course Code:</strong>  SCAFF-004</P>
+          <P><strong>Price:</strong> K1200</P>
+          <P><strong>Duration :</strong>  2 Days</P>
+          <br>
+
+          <p><strong>Course Description:</strong> <br> The Basic Scaffold Inspection is a 2-
+            day course. This course is intended for persons who are 
+            responsible for inspecƟng and checking basic scaffolds 
+            for safe use and for signing certificates and registers in 
+            accordance with statutory reg ulaƟ ons according to the 
+            mining regulations of Zambia.</p>
+            <br>
+           
+          <button onclick="openForm('Web Development')">Register</button>
         </div>
       </div>
 
-          <!-- Course 2 -->
+
       <div class="course-card">
-       <img src="./assets/images/slide (7).jpg" alt="Web Development" />
+        <img src="./assets/images/slide (7).jpg" alt="Web Development" />
         <div class="course-card-content">
-          <h3>Graphic Design</h3>
-          <p><strong>Description:</strong> Master design principles using Canva and Adobe tools.</p>
-          <p><strong>Duration:</strong> 2 Months</p>
-          <p><strong>Course Outline:</strong> Photoshop, Illustrator, Canva</p>
-          <p><strong>Price:</strong> $200</p>
-          <button onclick="openForm('Graphic Design')">Register</button>
+          <h3>Advanced Scaffold Inspection</h3>
+         
+          <P><strong>Course Code:</strong>  SCAFF-004</P>
+          <P><strong>Price:</strong> K1200</P>
+          <P><strong>Duration :</strong>  5 Days</P>
+          <br>
+
+          <p><strong>Course Description:</strong> <br> The Advanced Scaffold Inspection is a 5-day
+            course. This course was developed for delegates to have an
+            understanding of the appropriate safety and statutory regulaƟons
+            and the ability to interpret design drawings and specificaƟons when
+            inspecƟng complex/ design scaffolding structures for faults. This
+            training comes with a free inspection of Non-destructive t
+            esƟng (NDT) on all scaffold member structure</p>
+            <br>
+           
+          <button onclick="openForm('Web Development')">Register</button>
         </div>
       </div>
 
-          <!-- Course 2 -->
       <div class="course-card">
-       <img src="./assets/images/slide (7).jpg" alt="Web Development" />
+        <img src="./assets/images/slide (7).jpg" alt="Web Development" />
         <div class="course-card-content">
-          <h3>Graphic Design</h3>
-          <p><strong>Description:</strong> Master design principles using Canva and Adobe tools.</p>
-          <p><strong>Duration:</strong> 2 Months</p>
-          <p><strong>Course Outline:</strong> Photoshop, Illustrator, Canva</p>
-          <p><strong>Price:</strong> $200</p>
-          <button onclick="openForm('Graphic Design')">Register</button>
+          <h3>Scaffold Awareness</h3>
+         
+          <P><strong>Course Code:</strong>  SCAFF-005</P>
+          <P><strong>Price:</strong> K1200</P>
+          <P><strong>Duration :</strong>  5 Days</P>
+          <br>
+
+          <p><strong>Course Description:</strong> <br> IntroducƟon to Scaffold Policy, Stability of
+            Scaffolds, Access & Egress, PPE, Work Plaƞorms, Loading &
+            Tagging of Scaffolds, Types of Scaffolds, Suitability & Security.</p>
+            <br>
+           
+          <button onclick="openForm('Web Development')">Register</button>
         </div>
       </div>
 
@@ -487,6 +677,161 @@
 
     </div>
   </div>
+
+
+  
+  <section class="banner">
+    <div class="banner-text">
+      <h1>Empower Your Skills</h1>
+      <p>Join our professional training courses today</p>
+    </div>
+  </section>
+
+  <div class="container-courses">
+    <h1>Our Training Programs</h1>
+    <div class="course-list">
+      
+
+      <div class="course-card">
+        <img src="./assets/images/slide (7).jpg" alt="Web Development" />
+        <div class="course-card-content">
+          <h3>ULTRASONIC TESTING (UT)</h3>
+          <P><strong>Course Overview:</strong> Learn the principles of ultrasonic wave propagation, equipment 
+            calibration, flaw detection, and thickness measurements.
+           </P>
+           <br>
+             <P><strong>Levels Offered:</strong>Level I & Level II.</P>
+             <br>
+          <P><strong>Certification:</strong> Compliant with ISO 9712 standards.</P>
+          <br>
+          <button onclick="openForm('Web Development')">Register</button>
+        </div>
+      </div>
+
+
+
+      <div class="course-card">
+        <img src="./assets/images/slide (7).jpg" alt="Web Development" />
+        <div class="course-card-content">
+          <h3>MAGNETIC PARTICLE TESTING (MT)</h3>
+          <P><strong>Course Overview:</strong> Understand the magnetic properties of materials, techniques for detecting 
+            surface and near-surface discontinuities, and equipment handling.
+              </P>
+              <br>
+           <P><strong>Levels Offered:</strong>Level I & Level II.</P>
+           <br>
+          <P><strong>Certification:</strong> Compliant with ISO 9712 standards.</P>
+          <br>
+          <button onclick="openForm('Web Development')">Register</button>
+        </div>
+      </div>
+
+
+
+
+
+          <!-- Course 2 -->
+      <div class="course-card">
+       <img src="./assets/images/slide (7).jpg" alt="Web Development" />
+        <div class="course-card-content">
+          <h3>LIQUID PENETRANT TESTING (PT)</h3>
+          <p><strong>Course Overview:</strong> Learn about various penetrant materials, application techniques, and the 
+            interpretation of results</p>
+            <br>
+          <p><strong>Levels Offered:</strong>Level I, Level II, and Level III.</p>
+          <br>
+          <p><strong>Certification:</strong> Compliant with ISO 9712 standards.</p>
+          <br>
+          <button onclick="openForm('Graphic Design')">Register</button>
+        </div>
+      </div>
+
+      
+          <!-- Course 2 -->
+          <div class="course-card">
+            <img src="./assets/images/slide (7).jpg" alt="Web Development" />
+             <div class="course-card-content">
+               <h3>VIBRATION ANALYSIS</h3>
+               <p><strong>Course Overview:</strong> LLearn about the principles of vibration analysis, equipment setup, data 
+                collection, and interpretation for predictive maintenance</p>
+                <br>
+               <p><strong>Levels Offered:</strong>Category I & Category II</p>
+               <br>
+               <p><strong>Certification:</strong> Compliant with ISO 9712 standards.</p>
+               <br>
+               <button onclick="openForm('Graphic Design')">Register</button>
+             </div>
+           </div>
+
+
+     
+
+
+      <!-- Add more course cards here -->
+
+    </div>
+  </div>
+
+
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Column 1: Useful Links -->
+      <div class="footer-links">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="training.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+
+         <!-- Column 1: Useful Links -->
+      <div class="footer-links">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2: Social Media -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div  class="social-icons">
+          <a style="color: #fff;" href="#"><i class=" fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          
+        </div>
+      </div>
+
+      <!-- Column 3: Contact Form -->
+      <div class="footer-form">
+        <h3>Contact Us</h3>
+        <form action="#" method="post">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+           <p>&copy; PIKE ENGINEERING. All rights reserved.</p>
+    </div>
+  </footer>
 
   <!-- Registration Popup Form -->
   <div class="popup-form" id="registerForm">
